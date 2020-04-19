@@ -1,0 +1,56 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito|PT+Sans:400,700');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    background: #454c54;
+    color: #fff;
+    font-size: 1.3rem;
+
+    h2 {
+        font-family: "PT Sans", sans-serif;
+        text-transform: uppercase;
+        color: #04d1dc;
+    }
+
+    #leaderboard {
+        font-size: 30px;
+        font-family: "PT Sans", sans-serif;
+
+        thead {
+            text-transform: uppercase;
+            color: #04d1dc;
+
+            th {
+                font-weight: normal;
+                padding-bottom: 30px;
+            }
+        }
+
+        tbody {
+            font-family: "PT Sans", sans-serif;
+
+            tr {
+                &:not(:last-child) {
+                    border-bottom: 1px solid #666;
+                }
+
+                td {
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    #add_yourself {
+        .form-text.text-muted {
+            color: #ddd !important;
+        }
+    }
+}
