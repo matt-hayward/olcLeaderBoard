@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Participant;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -23,6 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home')->with([
+            'participants' => Participant::orderBy('score', 'desc')
+                ->orderBy('name', 'asc')
+                ->get(),
+        ]);
     }
 }

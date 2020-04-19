@@ -28,6 +28,8 @@ return [
 
     'env' => env('APP_ENV', 'production'),
 
+    'verification_code' => env('VERIFICATION_CODE', 12345),
+
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode

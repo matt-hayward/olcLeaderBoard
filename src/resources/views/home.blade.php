@@ -3,20 +3,30 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
+        <div class="col-md-12">
+            <table class="w-75 ml-auto mr-auto" id="leaderboard">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Points</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($participants as $participant)
+                        <tr>
+                            <td>{{$participant->name}}</td>
+                            <td>{{$participant->score}}</td>
+                            <td>
+                                <form action="{{route('cast-vote', ['participant' => $participant])}}" method="post">
+                                    @csrf
+                                    <button type="submit" class="btn btn-primary btn-sm">+1</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

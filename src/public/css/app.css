@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito|PT+Sans:400,700);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -10880,5 +10880,49 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+body {
+  background: #454c54;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+body h2 {
+  font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+  color: #04d1dc;
+}
+
+body #leaderboard {
+  font-size: 30px;
+  font-family: "PT Sans", sans-serif;
+}
+
+body #leaderboard thead {
+  text-transform: uppercase;
+  color: #04d1dc;
+}
+
+body #leaderboard thead th {
+  font-weight: normal;
+  padding-bottom: 30px;
+}
+
+body #leaderboard tbody {
+  font-family: "PT Sans", sans-serif;
+}
+
+body #leaderboard tbody tr:not(:last-child) {
+  border-bottom: 1px solid #666;
+}
+
+body #leaderboard tbody tr td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+body #add_yourself .form-text.text-muted {
+  color: #ddd !important;
 }
 
