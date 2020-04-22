@@ -24,10 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home')->with([
-            'participants' => Participant::orderBy('score', 'desc')
-                ->orderBy('name', 'asc')
-                ->get(),
-        ]);
+        return view('home');
     }
 }
