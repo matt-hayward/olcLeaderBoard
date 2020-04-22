@@ -1,1 +1,3 @@
 .env
+src/.env.testing
+src/.env.dusk.local

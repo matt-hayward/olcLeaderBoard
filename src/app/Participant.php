@@ -13,4 +13,10 @@ class Participant extends Model
         $this->score++;
         $this->save();
     }
+
+    public function decrementVote()
+    {
+        $this->score--;
+        $this->save();
+    }
 }

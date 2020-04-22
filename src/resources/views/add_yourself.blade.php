@@ -18,14 +18,14 @@
                     </div>
                     <div class="form-group">
                         <label for="verification_code">Verification Code</label>
-                        <input type="text" class="form-control" id="verification_code" name="verification_code" value="{{{old('verification_code')}}}">
+                        <input type="password" class="form-control" id="verification_code" name="verification_code" value="{{{old('verification_code')}}}">
                         @if ($errors->has('verification_code'))
                             <small class="text-danger">{{$errors->first('verification_code')}}</small>
                         @endif
                         <small class="form-text text-muted">You can request the verification code from a moderator on the OLC Discord.</small>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-success">Get Added</button>
+                        <button id="save" type="submit" class="btn btn-success">Get Added</button>
                     </div>
                 </form>
             </div>
