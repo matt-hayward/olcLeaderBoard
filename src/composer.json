@@ -15,7 +15,8 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
-        "livewire/livewire": "^1.0"
+        "livewire/livewire": "^1.0",
+        "ext-json": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
