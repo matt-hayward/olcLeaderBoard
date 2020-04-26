@@ -21,7 +21,7 @@ class IndexTest extends TestCase
         $response->assertSessionDoesntHaveErrors();
 
         foreach ($participants as $participant) {
-            $response->assertSee(e($participant->name));
+            $response->assertSee($participant->name);
         }
     }
 
