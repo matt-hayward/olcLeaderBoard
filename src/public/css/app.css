@@ -10922,7 +10922,21 @@ body #leaderboard tbody tr td {
   padding-bottom: 15px;
 }
 
+body #leaderboard tbody tr td a {
+  color: inherit;
+}
+
+body #leaderboard tbody tr td a:hover {
+  text-decoration: none;
+}
+
 body #add_yourself .form-text.text-muted {
   color: #ddd !important;
+}
+
+body #votes_chart {
+  width: 100%;
+  height: 600px;
+  background: #e8e8e8;
 }
 

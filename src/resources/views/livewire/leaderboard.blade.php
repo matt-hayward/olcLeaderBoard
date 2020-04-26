@@ -10,7 +10,11 @@
         <tbody>
         @foreach ($participants as $participant)
             <tr id="participant-{{$participant->id}}">
-                <td>{{$participant->name}}</td>
+                <td>
+                    <a class="votes-link" href="{{route('votes', ['participant' => $participant])}}">
+                        {{$participant->name}}
+                    </a>
+                </td>
                 <td>{{$participant->score}}</td>
                 <td class="text-right">
                     <button wire:click="addVote({{$participant->id}})" type="button" class="btn btn-primary btn-sm inc-score">+1</button>
